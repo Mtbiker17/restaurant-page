@@ -1,6 +1,7 @@
 import { createTitle, createSlogan, initializeHomepage } from './modules/homepage.js'
 import { loadAboutPage } from './modules/aboutpage.js';
 import { loadMenuPage } from './modules/menupage';
+import { loadLocationPage } from './modules/locationpage'
 initializeHomepage();
 
 //clears current tab
@@ -17,21 +18,20 @@ home.addEventListener('click', () => {
     clearCurrentPage(content);
     content.appendChild(createTitle());
     content.appendChild(createSlogan());
-    console.log('home clicked')
 })
 
 about.addEventListener('click', () => {
     clearCurrentPage(content);
     content.appendChild(loadAboutPage());
-    console.log('about clicked')
 })
 
 menu.addEventListener('click', () => {
     clearCurrentPage(content);
     content.appendChild(loadMenuPage());
-    console.log('clicked')
 })
 
 info.addEventListener('click', () => {
-    console.log('clicked')
+    clearCurrentPage(content);
+    content.appendChild(loadLocationPage());
+
 })
