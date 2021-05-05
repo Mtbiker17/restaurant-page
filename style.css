@@ -69,9 +69,9 @@ html {
     background-color: black;
     background: rgba(0, 0, 0, 0.5);
     margin: auto;
-    max-width: 500px;
+    max-width: 600px;
     font-size: 150%;
-    margin-top: 15%;
+    margin-top: 10%;
     border-radius: 15px;
     color: white;
     padding: 20px;
@@ -107,7 +107,11 @@ html {
     max-width: 75%;
     font-size: 150%;
     font-family: 'Croissant One', cursive;
-    
+}
+
+.kitchenImage {
+    border-radius: 50px;
+    padding: 20px;
 }
 
 .menuItems {
@@ -129,10 +133,31 @@ html {
 .locationContainer {
     display: flex;
     flex-direction: row;
-    justify-content: space-around;
+    justify-content: left;
     margin: 15% auto auto auto;
     background: rgba(255, 255, 255, 0.3);
     border-radius: 20px;
-    height: 500px;
-    width: 900px;
+    height: fit-content;
+    max-width: 1200px;
+    padding: 40px;
+}
+
+.portland {
+    margin-right: 60px;
+    border-radius: 20px;
+}
+
+.informationContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: left;
+    height: fit-content;
+    max-width: 700px;
+}
+
+.addressContainer {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
 }
