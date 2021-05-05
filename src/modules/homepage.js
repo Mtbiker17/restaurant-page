@@ -44,9 +44,7 @@ function createSlogan() {
     slogan.classList.add('slogan');
     let definition = document.createElement('div');
     let line = document.createElement('div');
-    //slogan.appendChild(definition);
     slogan.appendChild(line);
-    //definition.textContent = "|| denizen (noun). a person who inhabits a particular place."
     line.textContent = "* Local flair from local fare *"
     return slogan;
 };
