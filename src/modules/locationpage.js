@@ -13,17 +13,56 @@ function loadLocationPage() {
 
     let informationContainer = document.createElement('div');
     informationContainer.classList.add('informationContainer');
+    
     let addressContainer = document.createElement('div');
     addressContainer.classList.add('addressContainer');
-    let icon1 = document.createElement('img');
-    icon1.setAttribute('src', '/dist/images/ping.png')
-    icon1.setAttribute('height', '50px' )
-    icon1.setAttribute('width', '50px');
-    let address = document.createElement('div');
-    address.textContent = "Hope this worked!"
-    addressContainer.appendChild(icon1);
+    
+    let mapIcon = document.createElement('img');
+    mapIcon.setAttribute('src', '/dist/images/ping.png')
+    mapIcon.setAttribute('height', '50px' )
+    mapIcon.setAttribute('width', '50px');
+   
+     let address = document.createElement('div');
+    address.classList.add('address');
+    address.textContent = "555 Fore Street, Portland, Maine"
+    
+    let phoneContainer = document.createElement('div');
+    phoneContainer.classList.add('addressContainer');
+    
+    let phoneIcon = document.createElement('img');
+    phoneIcon.setAttribute('src', '/dist/images/phoneIcon.png');
+    phoneIcon.setAttribute('height', '40px');
+    phoneIcon.setAttribute('width', '40px');
+
+    let phone = document.createElement('div');
+    phone.classList.add('address');
+    phone.textContent = "123-555-1234"
+
+    let hoursContainer = document.createElement('div');
+    hoursContainer.classList.add('addressContainer');
+    
+    let hoursIcon = document.createElement('img');
+    hoursIcon.setAttribute('src', '/dist/images/hoursIcon.png');
+    hoursIcon.setAttribute('height', '50px');
+    hoursIcon.setAttribute('width', '50px');
+
+    let hours = document.createElement('div');
+    hours.classList.add('address');
+    hours.textContent = "Mon-Thurs: 12p-11p Fri-Sun:11a-11p"
+    
+
+    addressContainer.appendChild(mapIcon);
     addressContainer.appendChild(address);
 
+    phoneContainer.appendChild(phoneIcon);
+    phoneContainer.appendChild(phone);
+
+    hoursContainer.appendChild(hoursIcon);
+    hoursContainer.appendChild(hours);
+
+    informationContainer.appendChild(addressContainer);
+    informationContainer.appendChild(phoneContainer);
+    informationContainer.appendChild(hoursContainer);
     locationContainer.appendChild(mapContainer);
     locationContainer.appendChild(informationContainer);
 
