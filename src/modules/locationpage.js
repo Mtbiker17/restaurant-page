@@ -4,7 +4,7 @@ function loadLocationPage() {
 
     let mapContainer = document.createElement('div');
     let portland = document.createElement('img');
-    portland.setAttribute('src', 'images/portland.png')
+    portland.setAttribute('src', './images/portland.png')
     portland.setAttribute("height", "600");
     portland.setAttribute("width", "700");
     portland.setAttribute("alt", "portland");
@@ -18,7 +18,7 @@ function loadLocationPage() {
     addressContainer.classList.add('addressContainer');
     
     let mapIcon = document.createElement('img');
-    mapIcon.setAttribute('src', 'images/ping.png')
+    mapIcon.setAttribute('src', './images/ping.png')
     mapIcon.setAttribute('height', '50px' )
     mapIcon.setAttribute('width', '50px');
    
@@ -30,7 +30,7 @@ function loadLocationPage() {
     phoneContainer.classList.add('addressContainer');
     
     let phoneIcon = document.createElement('img');
-    phoneIcon.setAttribute('src', 'images/phoneIcon.png');
+    phoneIcon.setAttribute('src', './images/phoneIcon.png');
     phoneIcon.setAttribute('height', '40px');
     phoneIcon.setAttribute('width', '40px');
 
@@ -42,7 +42,7 @@ function loadLocationPage() {
     hoursContainer.classList.add('addressContainer');
     
     let hoursIcon = document.createElement('img');
-    hoursIcon.setAttribute('src', 'images/hoursIcon.png');
+    hoursIcon.setAttribute('src', './images/hoursIcon.png');
     hoursIcon.setAttribute('height', '50px');
     hoursIcon.setAttribute('width', '50px');
 
