@@ -10,7 +10,7 @@ function loadAboutPage() {
     description.classList.add('aboutText')
 
     let kitchenImage = document.createElement('img');
-    kitchenImage.setAttribute('src', '/dist/images/kitchen.jpg')
+    kitchenImage.setAttribute('src', './images/kitchen.jpg')
     kitchenImage.setAttribute("height", "400");
     kitchenImage.setAttribute("width", "600");
     kitchenImage.setAttribute("alt", "kitchen");
