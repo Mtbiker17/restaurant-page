@@ -13,59 +13,43 @@ function loadLocationPage() {
 
     let informationContainer = document.createElement('div');
     informationContainer.classList.add('informationContainer');
-    
-    let addressContainer = document.createElement('div');
-    addressContainer.classList.add('addressContainer');
-    
-    let mapIcon = document.createElement('img');
-    mapIcon.setAttribute('src', './images/ping.png')
-    mapIcon.setAttribute('height', '50px' )
-    mapIcon.setAttribute('width', '50px');
-   
-     let address = document.createElement('div');
-    address.classList.add('address');
-    address.textContent = "555 Fore Street, Portland, Maine"
-    
-    let phoneContainer = document.createElement('div');
-    phoneContainer.classList.add('addressContainer');
-    
-    let phoneIcon = document.createElement('img');
-    phoneIcon.setAttribute('src', './images/phoneIcon.png');
-    phoneIcon.setAttribute('height', '40px');
-    phoneIcon.setAttribute('width', '40px');
 
-    let phone = document.createElement('div');
-    phone.classList.add('address');
-    phone.textContent = "123-555-1234"
+    function createInfo(imageSource, text, size) {
+        let container = document.createElement('div');
+        container.classList.add('addressContainer');
+        let icon = document.createElement('img');
+        icon.setAttribute('src', `${imageSource}`);
+        icon.setAttribute('height', `${size}px`);
+        icon.setAttribute('width', `${size}px`);
+        let infoText = document.createElement('div');
+        infoText.classList.add('address');
+        infoText.textContent = text;
 
-    let hoursContainer = document.createElement('div');
-    hoursContainer.classList.add('addressContainer');
-    
-    let hoursIcon = document.createElement('img');
-    hoursIcon.setAttribute('src', './images/hoursIcon.png');
-    hoursIcon.setAttribute('height', '50px');
-    hoursIcon.setAttribute('width', '50px');
+        container.appendChild(icon);
+        container.appendChild(infoText);
+        return container;
+    }
 
-    let hours = document.createElement('div');
-    hours.classList.add('address');
-    hours.textContent = "Mon-Thurs: 12p-11p Fri-Sun:11a-11p"
-    
+    informationContainer.appendChild(createInfo(
+        './images/ping.png',
+        "555 Fore Street, Portland, Maine",
+        '50px'
+    ));
 
-    addressContainer.appendChild(mapIcon);
-    addressContainer.appendChild(address);
+    informationContainer.appendChild(createInfo(
+        './images/phoneIcon.png',
+        "123-555-1234",
+        '40px'
+    ));
 
-    phoneContainer.appendChild(phoneIcon);
-    phoneContainer.appendChild(phone);
+    informationContainer.appendChild(createInfo(
+        './images/hoursIcon.png',
+        "Mon-Thurs: 12p-11p Fri-Sun:11a-11p",
+        '50px'
+    ));
 
-    hoursContainer.appendChild(hoursIcon);
-    hoursContainer.appendChild(hours);
-
-    informationContainer.appendChild(addressContainer);
-    informationContainer.appendChild(phoneContainer);
-    informationContainer.appendChild(hoursContainer);
     locationContainer.appendChild(mapContainer);
     locationContainer.appendChild(informationContainer);
-
 
     return locationContainer;
 }
